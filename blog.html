@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Syed Ahsan Razvi</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleBlog(id) {
+            var content = document.getElementById("full-" + id);
+            var button = document.getElementById("btn-" + id);
+            
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                button.innerText = "Read Less";
+            } else {
+                content.style.display = "none";
+                button.innerText = "Read More";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="container">
+        <h2>Latest Posts</h2>
+
+        <div class="blog-post">
+            <h3>My Experience with MyLang Compiler</h3>
+            <p>The Journey of MyLang: Crafting a Language from Scratch...</p>
+            
+            <div id="full-1" class="full-content" style="display: none;">
+                <p>Building a programming language from the ground up has been nothing short of an electrifying adventure,equal parts challenge and triumph. When I embarked on creating MyLang, I knew it wouldn’t be easy, but I underestimated just how deep the rabbit hole of compiler design goes.
+From the first line of code, I found myself navigating a maze of lexical analysis, parsing, semantic analysis, IR generation, and optimization,each step revealing new complexities and hidden intricacies. Debugging syntax trees felt like deciphering an alien script, and every breakthrough came with the thrill of unlocking a new level in an ever-expanding puzzle.
+Perhaps the biggest beast to tame was getting the Abstract Syntax Tree (AST) representation just right. It took countless iterations,sketching out structures, refining node relationships, and rethinking approaches all to ensure MyLang could gracefully interpret and transform code. Each refinement was a battle, but seeing the AST finally click into place was a victory like no other.
+Looking back, the journey of building MyLang was more than just writing a compiler,it was engineering a language, shaping its soul, and breathing life into raw logic. And the best part? This is just the beginning. </p>
+                <img src="images/mylang-diagram.jpg" alt="MyLang Compiler Diagram">
+            </div>
+            
+            <button id="btn-1" class="read-more-btn" onclick="toggleBlog(1)">Read More</button>
+        </div>
+
+        <div class="blog-post">
+            <h3>Mastering the Art of Decision-Making: The Power of MDP in AI</h3>
+            <p>At the heart of intelligent decision-making in AI lies the Markov Decision Process (MDP)...</p>
+
+            <div id="full-2" class="full-content" style="display: none;">
+                <p>Imagine a world where machines think, adapt, and strategize,where AI doesn’t just react but plans ahead like a grandmaster in chess or a commander on the battlefield. At the core of this intelligence lies the Markov Decision Process (MDP),the silent architect of AI-driven decision-making.
+An MDP is not just a mathematical framework; it’s the mind of an AI, sculpting its choices in an environment full of uncertainty and opportunity. Every action leads to a new reality, governed by states, actions, transition probabilities, and rewards,the fundamental building blocks that define how an agent navigates its world.
+<p>Think of an AI as an explorer in an ever-shifting labyrinth. With every step, it must weigh its options:</p>
+<p>🔹 Stay on a safe path or take a risky shortcut?</p>
+<p>🔹 Seek immediate rewards or strategize for long-term gain?</p>
+<p>🔹 Adapt to unexpected twists or rigidly follow predefined rules?</p>
+<p>In this high-stakes game of decision-making, MDPs transform randomness into strategy, chaos into control, and uncertainty into intelligence. Whether it's a self-learning robot, a financial AI predicting market trends, or a self-driving car avoiding collisions, MDPs are the invisible force shaping their choices.
+This isn’t just about algorithms,it’s about teaching machines to think, predict, and evolve. And in the grand arena of AI, those who master MDPs don’t just solve problems,they define the future. </p>
+                <img src="images/mdp-diagram.jpg" alt="MDP in AI">
+            </div>
+
+            <button id="btn-2" class="read-more-btn" onclick="toggleBlog(2)">Read More</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Syed Ahsan Razvi. All rights reserved.</p>
+    </footer>
+</body>
+</html>
